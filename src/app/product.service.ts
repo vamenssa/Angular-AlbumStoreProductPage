@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { getLocaleNumberSymbol } from '@angular/common';
+
 
 
 import 'rxjs/add/operator/map';

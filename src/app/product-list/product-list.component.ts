@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
+
+
 import { Product } from '../product';
+
 import { ProductService } from '../product.service';
+
 
 
 @Component({
@@ -12,10 +16,10 @@ export class ProductListComponent implements OnInit {
 
   products: Product[];
 
-  constructor(private _productService) { }
+  constructor(private _productService: ProductService) { }
 
   ngOnInit() {
-    this._productService.getProducts().subscribe(response => this.products = response.json());
+    this._productService.getProducts().subscribe(response => this.products = response);
   }
 
 }
